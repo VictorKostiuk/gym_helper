@@ -5,11 +5,12 @@ Rails.application.routes.draw do
     get 'users', to: 'devise/sessions#new'
   end
   devise_for :users
-  resources :exercises
   resources :exercise_sets
-
+  resources :exercises
   resources :training_plans do
-    resources :exercises
+    resources :exercises do
+      resources :exercise_sets
+    end
   end
 
   root to: 'home#index'

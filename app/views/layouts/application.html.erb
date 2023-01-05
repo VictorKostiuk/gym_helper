@@ -10,40 +10,40 @@
     <%= javascript_importmap_tags %> <%#  this loads JS from importmaps %>
   </head>
 
-  <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <%= link_to 'Home', root_path, class: 'nav-link' %>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Training plans', training_plans_path, class: 'nav-link' %>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Exercises', exercises_path, class: 'nav-link' %>
-          </li>
-        </ul>
-        <ul class="navbar-nav">
-          <% if user_signed_in? %>
-            <li class='nav-link'><%= current_user.email %></li>
-          <% else %>
-            <li class='nav-link'><%= link_to 'Sign in', user_registration_path, class: 'btn btn-dark' %></li>
-          <% end %>
-        </ul>
+  <nav>
+    <div class="logo"></div>
+
+    <ul>
+      <li><%= link_to 'Home', root_path, class: 'a' %></li>
+      <li><%= link_to 'Training plans', training_plans_path, class: 'a' %></li>
+      <li><%= link_to 'Exercises', exercises_path, class: 'a' %></li>
+      <% if user_signed_in? %>
+        <li><%= button_to "Sign out", destroy_user_session_path,
+                          method: :delete, class: 'link a', data: { confirm: "Are you sure?" } %></li>
+      <% else %>
+        <li><%= link_to "Sign Up", new_user_registration_path, class: 'a' %></li>
+        <li><%= link_to "Log in", new_user_session_path, class: 'a' %></li>
+      <% end %>
+    </ul>
+  </nav>
+  <header>
+    <div class="headline">
+      <div class="inner">
+        <h1><b>Welcome</b></h1>
+        <p>Scroll down the page</p>
       </div>
     </div>
-  </nav>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <div class="container">
-    <%= yield %>
+  </header>
+  <% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
 
+  <body>
+  <div class="container mt-5  mb-5">
+    <%= yield %>
   </div>
   </body>
 </html>

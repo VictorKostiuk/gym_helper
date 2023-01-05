@@ -1,50 +1,55 @@
-<h2>Title: <%= @training_plan.title %></h2>
-<p><b>Description: </b><%= @training_plan.description %></p>
-<p><b>Exercises: </b><%= @training_plan.exercises.count %></p>
+<div class="box">
+  <h2>Title: <%= @training_plan.title %></h2>
+  <p><b>Description: </b><%= @training_plan.description %></p>
+  <p><b>Exercises: </b><%= @training_plan.exercises.count %></p>
 
-
-<div class="d-flex">
-  <%= link_to 'Edit', edit_training_plan_path(@training_plan), class: "btn btn-dark mx-1" %>
-  <%= button_to 'Delete', training_plan_path(@training_plan), method: :delete, class: "btn btn-danger mx-1" %>
+  <div class="d-flex">
+    <%= link_to 'Edit', edit_training_plan_path(@training_plan), class: "btn btn-dark mx-1" %>
+    <%= button_to 'Delete', training_plan_path(@training_plan), method: :delete, class: "btn btn-danger mx-1" %>
+  </div>
 </div>
+
 
 <div class="row">
-<div class="col-md-9">
-  <table class="table mt-3">
-    <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Exercise name</th>
-      <th scope="col">Weight</th>
-      <th scope="col">Reps</th>
-    </tr>
-    </thead>
-    <tbody>
-    <% @training_plan.exercises.each do |exercise| %>
-      <% exercise.exercise_sets.each_with_index do |set, i| %>
-        <th scope="row"><%= i + 1 %></th>
-
-    <% end %>
-    <% end %>
-    </tbody>
-  </table>
-</div>
+  <div class="col-md-9">
+    <table class="table mt-3">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Exercise name</th>
+          <th scope="col">Weight</th>
+          <th scope="col">Reps</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @exercise_sets.each_with_index do |set, i| %>
+          <tr>
+            <th scope="row"><%= i + 1 %></th>
+            <td><%= set.exercise.name %></td>
+            <td><%= set.weight %></td>
+            <td><%= set.reps %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
   <div class="col-md-3">
     <table class="table mt-3">
       <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Show</th>
-      </tr>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Show</th>
+        </tr>
       </thead>
       <tbody>
-      <% @training_plan.exercises.each_with_index do |exercise, i| %>
-        <tr>
-          <th scope="row"><%= i + 1 %></th>
-          <td><%= link_to exercise.name, new_exercise_set_path(exercise_id: exercise.id),style: 'text-decoration: none', class: 'text-dark' %></td>
-          <td><%= link_to 'Show', exercise_path(exercise), class: 'btn btn-dark' %></td></tr>
-      <% end %>
+        <% @training_plan.exercises.each_with_index do |exercise, i| %>
+          <tr>
+            <th scope="row"><%= i + 1 %></th>
+            <td><b><%= link_to exercise.name, new_training_plan_exercise_exercise_set_path(exercise_id: exercise,
+                     training_plan_id: @training_plan), style: 'text-decoration: none', class: 'text-dark' %></b></td>
+            <td><%= link_to 'Show', exercise_path(exercise), class: 'btn btn-dark' %></td></tr>
+        <% end %>
       </tbody>
     </table>
   </div>

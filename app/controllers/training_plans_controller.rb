@@ -13,7 +13,9 @@ class TrainingPlansController < ApplicationController
 
   def edit; end
 
-  def show; end
+  def show
+    @exercise_sets = ExerciseSet.where(training_plan_id: @training_plan.id)
+  end
 
   def create
     @training_plan = TrainingPlan.new(training_plan_params)

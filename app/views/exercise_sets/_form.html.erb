@@ -1,4 +1,4 @@
-<%= form_with model: @exercise_set do |form| %>
+<%= form_for [@training_plan, @exercise, ExerciseSet.new] do |form| %>
   <% if @exercise&.errors&.full_messages&.any? %>
     <div class="alert alert-danger">
       <ul class="mb-0">
