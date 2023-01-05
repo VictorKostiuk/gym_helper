@@ -3,6 +3,6 @@
 class TrainingPlan < ApplicationRecord
   validates :title, :description, length: { minimum: 3 }
 
-  has_many :training_plans_exercises
+  has_many :training_plans_exercises, dependent: :destroy
   has_many :exercises, through: :training_plans_exercises
 end
