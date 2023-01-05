@@ -1,0 +1,17 @@
+<h1 class="d-flex justify-content-center mb-3"><b>Training plans</b></h1>
+
+<div class="row">
+  <% @training_plans.each do |plan| %>
+    <div class="col-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= plan.title %></h5>
+          <p class="card-text"><%= truncate(plan.description, length: 150) %></p>
+          <%= link_to 'See plan', training_plan_path(plan), class: 'btn btn-dark' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'New plan', new_training_plan_path, class: 'btn btn-dark mt-5' %>

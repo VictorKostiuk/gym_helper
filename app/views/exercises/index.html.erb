@@ -1,0 +1,17 @@
+<h1 class="d-flex justify-content-center mb-3"><b>Exercises</b></h1>
+
+<div class="row">
+  <% @exercises.each do |ex| %>
+    <div class="col-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= ex.name %></h5>
+          <p class="card-text"><%= truncate(ex.description, length: 150) %></p>
+          <%= link_to 'See Exercise', exercise_path(ex), class: 'btn btn-dark' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'New Exercise', new_exercise_path, class: 'btn btn-dark mt-5' %>

@@ -1,0 +1,46 @@
+<%= form_with model: @training_plan do |form| %>
+  <% if @training_plan&.errors&.full_messages&.any? %>
+    <div class="alert alert-danger">
+      <ul class="mb-0">
+        <% @training_plan.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3 mt-4 row">
+    <div class="col-sm-1 col-form-label">
+      <strong><%= form.label :title %></strong>
+    </div>
+
+    <div class="col-sm-9">
+      <%= form.text_field :title, autocomplete: "Title", class: 'form-control form-control-lg'  %>
+    </div>
+  </div>
+  <br>
+
+  <div class="mb-3 mt-4 row">
+    <div class="col-sm-1 col-form-label">
+      <strong><%= form.label :description %></strong>
+    </div>
+
+    <div class="col-sm-9">
+      <%= form.text_field :description, autocomplete: "Description", class: 'form-control form-control-lg'  %>
+    </div>
+  </div>
+  <br>
+
+  <div class="mb-3 mt-4 row">
+    <div class="col-sm-1 col-form-label">
+      <strong><%= form.label :Exercise %></strong>
+    </div>
+
+    <div class="col-sm-9">
+      <%= form.collection_select(:exercise_ids, Exercise.all, :id, :name, {:prompt => "Please Select a Sector"}, {:multiple => true} ) %>
+    </div>
+  </div>
+  <br>
+
+  <%= form.submit 'Submit', class: 'btn btn-dark' %>
+<% end %>
