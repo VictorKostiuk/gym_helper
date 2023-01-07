@@ -20,12 +20,12 @@ gem 'puma', '~> 5.0'
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'bootstrap', '~> 5.1.3'
 gem 'importmap-rails'
-gem 'pry'
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem 'turbo-rails'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem 'rubocop'
+gem 'rubocop-rspec'
 gem 'rubocop-rails'
 gem 'stimulus-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
@@ -53,8 +53,17 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'capybara'
+  gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
+  gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
 end
 
 group :development do

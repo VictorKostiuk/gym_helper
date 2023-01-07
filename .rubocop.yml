@@ -10,12 +10,15 @@ AllCops:
     - app/channels/**/*
     - app/jobs/**/*
     - node_modules/**/*
+    - spec/rails_helper.rb
+    - spec/spec_helper.rb
     - Gemfile
     - Rakefile
     - config.ru
 
 require:
   - rubocop-rails
+  - rubocop-rspec
 
 Style/Encoding:
   Enabled: false

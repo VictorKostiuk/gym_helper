@@ -1,0 +1,38 @@
+<div class="box">
+  <h2>Editing Set</h2>
+
+  <%= form_with model: @exercise_set do |form| %>
+    <% if @exercise&.errors&.full_messages&.any? %>
+      <div class="alert alert-danger">
+        <ul class="mb-0">
+          <% @exercise.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="mb-3 mt-4 row">
+      <div class="col-sm-1 col-form-label">
+        <strong><%= form.label :weight %></strong>
+      </div>
+
+      <div class="col-sm-9">
+        <%= form.number_field :weight, class: 'form-control form-control-lg'  %>
+      </div>
+    </div>
+    <br>
+
+    <div class="mb-3 mt-4 row">
+      <div class="col-sm-1 col-form-label">
+        <strong><%= form.label :reps %></strong>
+      </div>
+
+      <div class="col-sm-9">
+        <%= form.number_field :reps, class: 'form-control form-control-lg'  %>
+      </div>
+    </div>
+    <br>
+
+    <%= form.submit 'Submit', class: 'btn btn-dark' %>
+  <% end %></div>

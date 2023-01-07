@@ -53,11 +53,18 @@
     <orderEntry type="library" scope="PROVIDED" name="coderay (v1.1.3, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.1.10, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.6, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="database_cleaner (v2.0.1, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="database_cleaner-active_record (v2.0.1, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="database_cleaner-core (v2.0.1, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug (v1.6.1, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="devise (v4.8.1, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.5.0, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="digest (v3.1.0, RVM: ruby-3.1.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="erubi (v1.11.0, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="erubi (v1.12.0, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.8.1, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="factory_bot (v6.2.1, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="factory_bot_rails (v6.2.0, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="faker (v2.23.0, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.15.5, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v1.0.0, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.12.0, RVM: ruby-3.1.2) [gem]" level="application" />
@@ -66,33 +73,35 @@
     <orderEntry type="library" scope="PROVIDED" name="irb (v1.4.1, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.11.5, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json (v2.6.3, RVM: ruby-3.1.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="loofah (v2.18.0, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="loofah (v2.19.1, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.7.1, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="marcel (v1.0.2, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="matrix (v0.4.2, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="method_source (v1.0.0, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mini_mime (v1.1.2, RVM: ruby-3.1.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="minitest (v5.16.2, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="minitest (v5.17.0, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="msgpack (v1.5.4, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-imap (v0.2.3, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-pop (v0.1.1, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-protocol (v0.1.3, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-smtp (v0.3.1, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v2.5.8, RVM: ruby-3.1.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.13.8, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.13.10, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="orm_adapter (v0.5.0, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="parallel (v1.22.1, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="parser (v3.2.0.0, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="popper_js (v2.11.5, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry (v0.14.1, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pry-rails (v0.3.9, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="public_suffix (v4.0.7, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="puma (v5.6.4, RVM: ruby-3.1.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="racc (v1.6.0, RVM: ruby-3.1.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rack (v2.2.4, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="racc (v1.6.2, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack (v2.2.5, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v2.0.2, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v7.0.3.1, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-controller-testing (v1.0.5, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-dom-testing (v2.0.3, RVM: ruby-3.1.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.4.3, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.4.4, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v7.0.3.1, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rainbow (v3.1.1, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v13.0.6, RVM: ruby-3.1.2) [gem]" level="application" />
@@ -101,14 +110,21 @@
     <orderEntry type="library" scope="PROVIDED" name="reline (v0.3.1, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="responders (v3.0.1, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rexml (v3.2.5, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-core (v3.9.3, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v3.9.4, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v3.9.1, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-rails (v3.9.1, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-support (v3.9.4, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubocop (v1.42.0, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubocop-ast (v1.24.1, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubocop-rails (v2.17.4, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubocop-rspec (v2.16.0, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby-progressbar (v1.11.0, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v2.3.2, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sassc (v2.4.0, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sassc-rails (v2.1.2, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v4.3.0, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="shoulda-matchers (v5.3.0, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v4.1.1, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v3.4.2, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.4.4, RVM: ruby-3.1.2) [gem]" level="application" />
@@ -127,7 +143,7 @@
     <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.7.5, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.5, RVM: ruby-3.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="xpath (v3.2.0, RVM: ruby-3.1.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="zeitwerk (v2.6.0, RVM: ruby-3.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="zeitwerk (v2.6.6, RVM: ruby-3.1.2) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />
@@ -147,6 +163,7 @@
         <option value="devise:controllers" />
         <option value="devise:install" />
         <option value="devise:views" />
+        <option value="factory_bot:model" />
         <option value="generator" />
         <option value="helper" />
         <option value="integration_test" />
@@ -160,6 +177,20 @@
         <option value="resource" />
         <option value="responders:install" />
         <option value="responders_controller" />
+        <option value="rspec:controller" />
+        <option value="rspec:feature" />
+        <option value="rspec:generators" />
+        <option value="rspec:helper" />
+        <option value="rspec:install" />
+        <option value="rspec:integration" />
+        <option value="rspec:job" />
+        <option value="rspec:mailer" />
+        <option value="rspec:model" />
+        <option value="rspec:observer" />
+        <option value="rspec:request" />
+        <option value="rspec:scaffold" />
+        <option value="rspec:system" />
+        <option value="rspec:view" />
         <option value="scaffold" />
         <option value="scaffold_controller" />
         <option value="scss:assets" />
@@ -168,10 +199,18 @@
         <option value="system_test" />
         <option value="task" />
         <option value="test_unit:channel" />
+        <option value="test_unit:controller" />
         <option value="test_unit:generator" />
+        <option value="test_unit:helper" />
         <option value="test_unit:install" />
+        <option value="test_unit:integration" />
+        <option value="test_unit:job" />
         <option value="test_unit:mailbox" />
+        <option value="test_unit:mailer" />
+        <option value="test_unit:model" />
         <option value="test_unit:plugin" />
+        <option value="test_unit:scaffold" />
+        <option value="test_unit:system" />
       </list>
     </option>
     <option name="myGenerators">
@@ -187,6 +226,7 @@
         <option value="devise:controllers" />
         <option value="devise:install" />
         <option value="devise:views" />
+        <option value="factory_bot:model" />
         <option value="generator" />
         <option value="helper" />
         <option value="integration_test" />
@@ -200,6 +240,20 @@
         <option value="resource" />
         <option value="responders:install" />
         <option value="responders_controller" />
+        <option value="rspec:controller" />
+        <option value="rspec:feature" />
+        <option value="rspec:generators" />
+        <option value="rspec:helper" />
+        <option value="rspec:install" />
+        <option value="rspec:integration" />
+        <option value="rspec:job" />
+        <option value="rspec:mailer" />
+        <option value="rspec:model" />
+        <option value="rspec:observer" />
+        <option value="rspec:request" />
+        <option value="rspec:scaffold" />
+        <option value="rspec:system" />
+        <option value="rspec:view" />
         <option value="scaffold" />
         <option value="scaffold_controller" />
         <option value="scss:assets" />
@@ -208,10 +262,18 @@
         <option value="system_test" />
         <option value="task" />
         <option value="test_unit:channel" />
+        <option value="test_unit:controller" />
         <option value="test_unit:generator" />
+        <option value="test_unit:helper" />
         <option value="test_unit:install" />
+        <option value="test_unit:integration" />
+        <option value="test_unit:job" />
         <option value="test_unit:mailbox" />
+        <option value="test_unit:mailer" />
+        <option value="test_unit:model" />
         <option value="test_unit:plugin" />
+        <option value="test_unit:scaffold" />
+        <option value="test_unit:system" />
       </list>
     </option>
   </component>
@@ -410,6 +472,15 @@
           <RakeTaskImpl description="Prints out your Rack middleware stack" fullCommand="middleware" id="middleware" />
           <RakeTaskImpl description="Restart app by touching tmp/restart.txt" fullCommand="restart" id="restart" />
           <RakeTaskImpl description="Generate a cryptographically secure secret key (this is typically used to generate a secret for cookie sessions)" fullCommand="secret" id="secret" />
+          <RakeTaskImpl description="Run all specs in spec directory (excluding plugin specs)" fullCommand="spec" id="spec" />
+          <RakeTaskImpl id="spec">
+            <subtasks>
+              <RakeTaskImpl description="Run the code examples in spec/controllers" fullCommand="spec:controllers" id="controllers" />
+              <RakeTaskImpl description="Run the code examples in spec/models" fullCommand="spec:models" id="models" />
+              <RakeTaskImpl description="" fullCommand="spec:prepare" id="prepare" />
+              <RakeTaskImpl description="" fullCommand="spec:statsetup" id="statsetup" />
+            </subtasks>
+          </RakeTaskImpl>
           <RakeTaskImpl description="Report code statistics (KLOCs, etc) from the application or engine" fullCommand="stats" id="stats" />
           <RakeTaskImpl id="stimulus">
             <subtasks>
