@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "rails_helper"
 require "faker"
 
 module FeatureHelpers
@@ -16,7 +17,7 @@ module FeatureHelpers
     fill_in "Password", with: "12345678"
     fill_in "Password confirmation", with: "12345678"
     click_on "Sign up"
-    sleep 2
+    sleep 1
   end
 
   def create_plan

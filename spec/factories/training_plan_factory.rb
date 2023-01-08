@@ -1,6 +1,6 @@
 FactoryBot.define do
-  factory :exercise do
-    name { "default" }
+  factory :training_plan do
+    title { "default" }
     description { "for_that" }
   end
 end
