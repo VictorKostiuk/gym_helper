@@ -1,6 +1,12 @@
 require "rails_helper"
 
 RSpec.describe TrainingPlansController, type: :controller do
+  let(:user) { create(:user) }
+
+  before do
+    sign_in(user)
+  end
+
   describe "GET index" do
     let!(:training_plans) { FactoryBot.create(:training_plan) }
 
@@ -68,7 +74,9 @@ RSpec.describe TrainingPlansController, type: :controller do
     let!(:training_plan) { create(:training_plan) }
 
     it "assigns @teams" do
-      expect { delete :destroy, params: { id: training_plan.id } }.to change(TrainingPlan, :count).by(-1)
+      expect do
+        delete :destroy, params: { id: training_plan.id }
+      end.to change(TrainingPlan, :count).by(-1)
     end
   end
 end

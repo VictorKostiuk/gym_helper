@@ -1,6 +1,12 @@
 require "rails_helper"
 
 RSpec.describe ExercisesController, type: :controller do
+  let(:user) { create(:user) }
+
+  before do
+    sign_in(user)
+  end
+
   describe "GET index" do
     let!(:exercises) { FactoryBot.create(:exercise) }
 

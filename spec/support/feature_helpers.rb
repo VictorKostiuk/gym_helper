@@ -30,13 +30,21 @@ module FeatureHelpers
   def create_plan_with_exercise
     fill_in "Title", with: "test"
     fill_in "Description", with: "test1"
+    select "push up"
     click_on "Submit"
     sleep 1
   end
 
   def create_exercise
-    fill_in "Name", with: "test"
+    fill_in "Name", with: "push up"
     fill_in "Description", with: "test1"
+    click_on "Submit"
+    sleep 1
+  end
+
+  def create_exercise_set
+    fill_in "Weight", with: 60
+    fill_in "Reps", with: 12
     click_on "Submit"
     sleep 1
   end

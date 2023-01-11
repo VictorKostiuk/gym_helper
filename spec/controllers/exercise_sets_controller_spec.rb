@@ -1,6 +1,12 @@
 require "rails_helper"
 
 RSpec.describe ExerciseSetsController, type: :controller do
+  let(:user) { create(:user) }
+
+  before do
+    sign_in(user)
+  end
+
   describe "PUT update" do
     let(:exercise) { create(:exercise) }
     let(:training_plan) { create(:training_plan) }
@@ -52,9 +58,9 @@ RSpec.describe ExerciseSetsController, type: :controller do
     end
 
     it "assigns @teams" do
-      expect do
-        delete :destroy, params: { id: exercise_set.id, exercise_id: exercise.id, training_plan_id: training_plan.id }
-      end.to change(ExerciseSet, :count).by(-1)
+      delete :destroy, params: { id: exercise_set.id }
+
+      expect { exercise_set.reload }.to raise_error(ActiveRecord::RecordNotFound)
     end
   end
 end

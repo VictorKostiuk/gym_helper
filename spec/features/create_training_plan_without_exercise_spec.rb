@@ -4,7 +4,6 @@ require "support/feature_helpers"
 require "rails_helper"
 
 RSpec.describe "Training plan", driver: :selenium_chrome, type: :feature do
-
   it "Registered user creates training plan" do
     sign_up
     visit training_plans_path

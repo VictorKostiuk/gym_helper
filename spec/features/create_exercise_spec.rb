@@ -13,9 +13,5 @@ RSpec.describe "Exercise", driver: :selenium_chrome, type: :feature do
     expect(page).to have_content "test"
   end
 
-  it "Non-registered user try create exercise" do
-    visit exercises_path
-
-    expect(page).to have_content "You need to sign in or sign up before continuing."
-  end
+  include_examples "Examples", Exercise
 end
