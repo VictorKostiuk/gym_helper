@@ -4,7 +4,7 @@ class TrainingPlansController < ApplicationController
   before_action :set_training_plan, only: %i[show edit update destroy]
 
   def index
-    @training_plans = TrainingPlan.all
+    @training_plans = current_user.training_plans
   end
 
   def new
@@ -18,7 +18,7 @@ class TrainingPlansController < ApplicationController
   end
 
   def create
-    @training_plan = TrainingPlan.new(training_plan_params)
+    @training_plan = current_user.training_plans.new(training_plan_params)
     if @training_plan.save
       redirect_to training_plan_path(@training_plan)
     else
@@ -46,6 +46,6 @@ class TrainingPlansController < ApplicationController
   end
 
   def training_plan_params
-    params.require(:training_plan).permit(:title, :description, exercise_ids: [])
+    params.require(:training_plan).permit(:title, :description, :user_id, exercise_ids: [])
   end
 end

@@ -1,5 +1,6 @@
+<% provide :page_title, 'Editing Set' %>
+
 <div class="box">
-  <h2>Editing Set</h2>
 
   <%= form_with model: @exercise_set do |form| %>
     <% if @exercise&.errors&.full_messages&.any? %>

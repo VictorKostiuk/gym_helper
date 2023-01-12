@@ -1,0 +1,19 @@
+<% provide :page_title, 'Welcome' %>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="box">
+      <% if user_signed_in? %>
+        <h2><%= current_user.email.sub(/@.*/, '') %></h2>
+        <p><b>Number of training plans: </b>  <%= current_user.training_plans.count %></p>
+        <p>
+          <b>Your training plans: </b>
+          <% current_user.training_plans.each do |plan| %>
+            <br>
+            <b><%= link_to plan.title, training_plan_path(plan), class: 'text-dark' %></b>
+          <% end %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>
