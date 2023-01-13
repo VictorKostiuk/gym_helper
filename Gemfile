@@ -12,8 +12,7 @@ gem 'rails', '~> 7.0.3', '>= 7.0.3.1'
 gem 'sprockets-rails'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
-
+gem 'pg'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'devise', '~> 4.8'
 gem 'puma', '~> 5.0'
@@ -48,7 +47,8 @@ gem 'bootsnap', require: false
 
 # Use Sass to process CSS
 # gem "sassc-rails"
-
+gem 'ed25519', '>= 1.2', '< 2.0'
+gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -70,8 +70,8 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
   gem 'capistrano'
-  gem 'capistrano3-puma'
   gem 'capistrano-rails', require: false
+  gem 'capistrano-db-tasks', require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano-rvm'
 end

@@ -1,10 +1,10 @@
-lock "~> 3.14.0"
+lock "~> 3.17.1"
 
 require 'capistrano-db-tasks'
 
 set :application, 'gym_helper'
 set :repo_url, 'git@github.com:VictorKostiuk/gym_helper.git'
-set :deploy_to, '/home/deploy/gym_helper'
+set :deploy_to, '/home/ubuntu/gym_helper'
 set :branch, ENV['BRANCH'] if ENV['BRANCH']
 
 set :linked_files, %w{config/database.yml config/master.key}
