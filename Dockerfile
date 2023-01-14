@@ -9,10 +9,10 @@ RUN apt -get update -qq && \
 # Rails app lives here
 WORKDIR /rails
 # Set production environment
-ENV RAILS_LOG_TO_STDOUT="1"
-RAILS_SERVE_STATIC_FILES= "true"
-RAILS_ENV="production"
-BUNDLE_WITHOUT=" development"
+ENV RAILS_LOG_TO_STDOUT="1" \
+    RAILS_SERVE_STATIC_FILES="true" \
+    RAILS_ENV="production" \
+    BUNDLE_WITHOUT=" development"
 # Install application gems
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
