@@ -48,9 +48,10 @@ COPY . .
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile --gemfile app/ lib/
 # Precompiling assets for production without requiring secret RAILS_MASTER KEY
-RUN SECRET_KEY_BASE_DUMMY=1 bundle exec rails assets:precompile
+RUN SECRET_KEY_BASE=2a0ec1f9bc0ac2406be4951160454dc853347132af6b2bb72b340ebbabb369de5ef0f4044643fb14472100fb95679d7844cdc6a7078e48f176f65942c9052c19 bundle exec rails assets:precompile
 
-ENTRYPOINT ["/rails/bin/docker-entrypoint"]
+CMD ["chmod", "a+rwx", "bin/docker-entrypoint.sh"]
+ENTRYPOINT ["./bin/docker-entrypoint.sh"]
 
 EXPOSE 3000
-CMD ["/bin/rails", "server"]
+CMD ["./bin/rails", "server"]
