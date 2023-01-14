@@ -4,16 +4,26 @@ FROM ruby:$RUBY_VERSION
 RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash -
 
 # Install libvips for Active Storage preview support
-RUN apt-get update -qq && \
-    apt-get install -y build-essential && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /usr/share/doc /usr/share/man
+RUN echo 'deb http://ftp.debian.org/debian stretch-backports main' | tee /etc/apt/sources.list.d/stretch-backports.list && \
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys AA8E81B4331F7F50 && \
+    apt-get update -qq && \
+    apt-get upgrade --yes --force-yes && \
+    apt-get --yes --force-yes install libgmp-dev git git-core build-essential sqlite3 \
+    libssl-dev libreadline-dev libyaml-dev libsqlite3-dev libxml2-dev \
+    libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev zlib1g-dev
+ENV NODE_VERSION=16.13.0
 
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 # nvm environment variables
-ENV NVM_DIR /usr/local/nvm
-ENV NODE_VERSION 12.19.0
+ENV NVM_DIR=/root/.nvm
+RUN . "$NVM_DIR/nvm.sh" && nvm install ${NODE_VERSION}
+RUN . "$NVM_DIR/nvm.sh" && nvm use v${NODE_VERSION}
+RUN . "$NVM_DIR/nvm.sh" && nvm alias default v${NODE_VERSION}
+ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
+RUN node --version
+RUN npm --version
 
 RUN curl --silent -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.2/install.sh | bash
 # Rails app lives here
@@ -21,8 +31,8 @@ RUN curl --silent -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.2/i
 ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
 ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 
-RUN node -v
-RUN npm -v
+RUN #node -v
+RUN #npm -v
 
 WORKDIR /rails
 # Set production environment
